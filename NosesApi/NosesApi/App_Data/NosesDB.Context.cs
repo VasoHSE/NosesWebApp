@@ -13,10 +13,10 @@ namespace NosesApi.App_Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DbOperationsEntities : DbContext
+    public partial class NosesDbSecondEntities : DbContext
     {
-        public DbOperationsEntities()
-            : base("name=DbOperationsEntities")
+        public NosesDbSecondEntities()
+            : base("name=NosesDbSecondEntities")
         {
         }
     
@@ -25,13 +25,14 @@ namespace NosesApi.App_Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<City> City { get; set; }
+        public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<City_User> City_User { get; set; }
-        public virtual DbSet<Operation> Operation { get; set; }
+        public virtual DbSet<Operation> Operations { get; set; }
         public virtual DbSet<Operatopn_Doctor> Operatopn_Doctor { get; set; }
-        public virtual DbSet<Organisation> Organisation { get; set; }
+        public virtual DbSet<Organisation> Organisations { get; set; }
         public virtual DbSet<Organisation_User> Organisation_User { get; set; }
-        public virtual DbSet<User> User { get; set; }
-        public virtual DbSet<UserSession> UserSession { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserSession> UserSessions { get; set; }
+        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     }
 }

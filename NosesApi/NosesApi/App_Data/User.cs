@@ -19,9 +19,9 @@ namespace NosesApi.App_Data
         {
             this.City_User = new HashSet<City_User>();
             this.Operatopn_Doctor = new HashSet<Operatopn_Doctor>();
-            this.Organisation = new HashSet<Organisation>();
+            this.Organisations = new HashSet<Organisation>();
             this.Organisation_User = new HashSet<Organisation_User>();
-            this.UserSession = new HashSet<UserSession>();
+            this.UserSessions = new HashSet<UserSession>();
         }
     
         public int Id { get; set; }
@@ -48,10 +48,10 @@ namespace NosesApi.App_Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Operatopn_Doctor> Operatopn_Doctor { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Organisation> Organisation { get; set; }
+        public virtual ICollection<Organisation> Organisations { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Organisation_User> Organisation_User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserSession> UserSession { get; set; }
+        public virtual ICollection<UserSession> UserSessions { get; set; }
     }
 }
